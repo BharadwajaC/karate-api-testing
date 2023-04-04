@@ -13,7 +13,7 @@ pipeline {
             steps{
                 script{
                     sh 'docker --version'
-                    sh 'docker run -it --name=mavenjdk11 maven/baseline:latest bash'
+                    sh 'docker run -i --name=mavenjdk11 maven/baseline:latest bash'
                     sh 'cd karate-api-testing'
                     sh 'mvn clean install'
                 }
