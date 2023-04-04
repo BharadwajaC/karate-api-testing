@@ -5,5 +5,5 @@ RUN mkdir home/karate
 RUN cd home/karate
 RUN git clone https://github.com/BharadwajaC/karate-api-testing.git
 RUN chmod -R 777 karate-api-testing
-WORKDIR /home/karate/karate-api-testing
+RUN cd /home/karate/karate-api-testing
 RUN mvn clean install
