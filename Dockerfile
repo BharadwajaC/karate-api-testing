@@ -3,5 +3,5 @@ RUN apt-get update
 RUN apt-get install -y git
 RUN mkdir home/karate_api_testing
 RUN home/karate_api_testing
-ADD gh repo clone BharadwajaC/karate-api-testing .
+RUN git clone https://github.com/BharadwajaC/karate-api-testing.git
 WORKDIR home/karate_api_testing
