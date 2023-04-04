@@ -9,14 +9,5 @@ pipeline {
                 }
             }
         }
-        stage('Build maven'){
-            steps{
-                script{
-                    sh 'docker run -i --name=mavenjdk11 maven/baseline:latest bash'
-                    sh 'cd /home/karate/karate-api-testing'
-                    sh 'mvn clean install'
-                }
-            }
-        }
     }
 }
