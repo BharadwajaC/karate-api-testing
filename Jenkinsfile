@@ -9,14 +9,5 @@ pipeline {
                 }
             }
         }
-        stage('Build maven test inside a container'){
-            steps{
-                script{
-                    sh 'docker --version'
-                    sh 'docker run -i --name=mavenjdk11 maven/baseline:latest bash'
-                    sh 'mvn clean install'
-                }
-            }
-        }
     }
 }
